@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@mixin subheadline {
+    font-family: "futura-pt-light-italic-regular";
+    src: url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("woff"), url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("opentype"), url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("truetype");
+    font-style: italic;
+}

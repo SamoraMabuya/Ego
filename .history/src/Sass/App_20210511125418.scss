@@ -1,0 +1,26 @@
+@use './home';
+@use './navbar';
+body,
+* {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+* {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    body::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent;
+    }
+    body::-webkit-scrollbar {
+        width: 3px !important;
+        background-color: transparent;
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}

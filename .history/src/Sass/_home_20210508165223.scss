@@ -1,0 +1,6 @@
+@use './colors.scss';
+@import './colors' // $brown: #9B6800;
+.hello {
+    color: colors.$brown;
+    font-size: 20rem;
+}

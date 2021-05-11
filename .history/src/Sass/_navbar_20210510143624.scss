@@ -1,0 +1,19 @@
+@import './variables.scss';
+.logo {
+    @include logoSizes;
+    padding-top: 35.24px;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    ul {
+        display: flex;
+        list-style: none;
+        // margin: auto;
+        li {
+            margin-right: 33px;
+        }
+    }
+}

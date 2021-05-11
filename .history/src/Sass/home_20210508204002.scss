@@ -1,0 +1,6 @@
+@import './colors';
+@import './fonts' .hello {
+    @include subheadline;
+    font-size: 20rem;
+    color: $darkergrey;
+}

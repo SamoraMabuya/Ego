@@ -1,0 +1,41 @@
+@import './colors';
+@import './fonts';
+@import './variables.scss';
+.homeSection {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    // height: 100vh;
+    background-color: $white;
+}
+
+.headline {
+    @include headlines;
+    margin: 150px 0px 0px 297px;
+    position: relative;
+    strong {
+        @include headlineStrong;
+    }
+}
+
+.subheadline {
+    @include subheadlinefont;
+    margin: 0px 0px 0px 297px;
+    font-size: 36px;
+    color: $brown;
+    width: 650px;
+}
+
+.whiteAirs {
+    height: 148.5731201171875px;
+    width: 292.8611755371094px;
+    object-fit: contain;
+    margin: 70px 0px 0px 250px;
+}
+
+.brownSneaker {
+    height: 747px;
+    width: 586px;
+    object-fit: contain;
+    margin: -400px 0px 0px 503px;
+}

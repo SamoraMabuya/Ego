@@ -1,0 +1,9 @@
+@use './colors.scss';
+$brown: #9B6800;
+.body {
+    background-color: $brown;
+}
+
+.hello {
+    color: #9B6800;
+}

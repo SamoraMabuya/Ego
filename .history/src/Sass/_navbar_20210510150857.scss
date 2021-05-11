@@ -1,0 +1,29 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.logo {
+    @include logoSizes;
+    padding-top: 35.24px;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 75px;
+    text-decoration: none;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: auto;
+        text-decoration: inherit;
+        li {
+            margin-inline: 300px;
+            text-decoration: inherit;
+            a {
+                @include navigationfont;
+                text-decoration: none;
+                color: $brown;
+                font-size: 30px;
+            }
+        }
+    }
+}

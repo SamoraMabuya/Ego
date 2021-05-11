@@ -1,0 +1,11 @@
+@import './colors';
+@import './fonts';
+@font-face {
+    font-family: futuraptmedium;
+    src: url(../font/FuturaPTMedium.otf);
+}
+
+.hello {
+    font-family: futuraptmedium;
+    font-size: 50px;
+}

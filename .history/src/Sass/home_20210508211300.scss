@@ -1,0 +1,11 @@
+@import './colors';
+@import './fonts';
+.hello {
+    @include subheadline;
+    font-size: 50px;
+}
+
+.mellow {
+    @include shopbuttonfont;
+    font-size: 50px;
+}

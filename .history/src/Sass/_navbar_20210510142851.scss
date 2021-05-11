@@ -1,0 +1,5 @@
+@import './variables.scss';
+.logo {
+    @include logoSizes;
+    margin-top: 35.24px;
+}
