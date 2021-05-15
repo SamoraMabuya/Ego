@@ -1,0 +1,115 @@
+    @import './colors';
+    @import './fonts';
+    @import './variables.scss';
+    .firstpart {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        background-color: $white;
+        height: auto;
+    }
+    
+    .headline {
+        @include headlines;
+        margin: 130px 0px 0px 150px;
+        strong {
+            @include headlineStrong;
+        }
+    }
+    
+    .subheadline {
+        @include subheadlinefont;
+        margin: 0px 0px 0px 150px;
+        font-size: 36px;
+        color: $brown;
+        width: 650px;
+    }
+    
+    .whiteAirs {
+        max-width: 80%;
+        margin: 110px 0px 0px 100px;
+        // height: auto;
+        // transform: translate(210px, 0px);
+    }
+    
+    .brownSneaker {
+        max-width: 120%;
+        margin: 190px 100px 0px -30px;
+        // max-width: 35%;
+        // height: auto;
+        // transform: translate(100px, 180px);
+    }
+    
+    .bs {
+        z-index: 2;
+    }
+    
+    .downwardShoe {
+        max-width: 25%;
+        margin: 70px 0px 0px 30px;
+        // max-width: 8%;
+        // height: auto;
+        // transform: translate(180px, -40px);
+    }
+    
+    .shopbutton {
+        @include shopbuttonfont;
+        height: 97.1953125px;
+        width: 282px;
+        background: $brown;
+        color: $white;
+        display: block;
+        margin: 0 auto;
+        font-size: 40px;
+        outline: none;
+        border: none;
+        transform: translate(2px, 240px);
+        margin-bottom: 300px;
+    }
+    
+    .secondpart {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        // height: 100vh;
+        background-color: $cream;
+        overflow: hidden;
+    }
+    
+    .secondpart-headline {
+        @include headlinefont;
+        transform: translate(215px, 78px);
+        color: $darkgrey;
+        font-size: 40px;
+        margin-bottom: 200px
+    }
+    
+    %buttonstyle {
+        @include shopbuttonfont;
+        height: 91px;
+        width: 289px;
+        background-color: $darkgrey;
+        font-size: 35px;
+        color: $cream;
+        letter-spacing: 0.295em;
+    }
+    
+    .Browse {
+        @extend %buttonstyle;
+        transform: translate(220px, 0px);
+    }
+    
+    %whiteboxStyle {
+        height: 526px;
+        width: 601px;
+        background: $white;
+    }
+    
+    .whiteBox {
+        @extend %whiteboxStyle;
+    }
+    
+    .col-6 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
