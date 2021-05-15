@@ -78,7 +78,6 @@
             margin-bottom: 110px;
         }
         
-        // Browse sneakers section
         .secondpart {
             width: 100%;
             height: auto;
@@ -89,7 +88,8 @@
         .secondpart .grid-ContainerSecondpart {
             display: flex;
             height: 100vh;
-            margin-top: 100px;
+            background-color: aqua;
+            padding-top: 100px;
         }
         
         .secondpart .grid-ContainerSecondpart ul li {
@@ -123,7 +123,7 @@
             width: 289px;
             background-color: $darkgrey;
             font-size: 35px;
-            color: $white;
+            color: $cream;
             letter-spacing: 0.295em;
         }
         
@@ -133,24 +133,11 @@
         }
         
         %whiteboxStyle {
-            height: 486px;
-            width: 700px;
+            height: 526px;
+            width: 601px;
             background: $white;
         }
         
         .whiteBox {
             @extend %whiteboxStyle;
-        }
-        
-        .new {
-            @include navigationfont;
-            font-size: 30px;
-            color: $brown;
-            text-align: end;
-            margin: 10px 15px 0px 0px;
-        }
-        
-        .mainheroSide {
-            max-width: 90%;
-            margin-top: 100px;
         }

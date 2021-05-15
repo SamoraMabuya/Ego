@@ -5,6 +5,8 @@ import Home from './Home'
 
 const App = () => {
   return (
+    <di>    <div New="New"/>
+    </di>
 
     <Home/>
 

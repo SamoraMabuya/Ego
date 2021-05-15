@@ -86,7 +86,6 @@ const Home = (props) => {
             <div className="whiteBox">
               <div className="new">New</div>
               <Image className="mainheroSide" src={mainheroSide} alt="mainheroside"/>
-              
             </div>
 
 

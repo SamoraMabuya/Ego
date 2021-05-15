@@ -4,8 +4,6 @@ import Navigation from "./Navbar";
 import WhiteAirs from "../assets/Shoes/white air shoes.png";
 import mainhero from "../assets/Shoes/main hero shoe.png";
 import downnWardShoe from "../assets/Shoes/downward.png";
-import mainheroSide from "../assets/Shoes/main hero shoe side shot.png";
-
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
@@ -85,10 +83,7 @@ const Home = (props) => {
             <li>
             <div className="whiteBox">
               <div className="new">New</div>
-              <Image className="mainheroSide" src={mainheroSide} alt="mainheroside"/>
-              
             </div>
-
 
             </li>
           </ul>

@@ -78,41 +78,41 @@
             margin-bottom: 110px;
         }
         
-        // Browse sneakers section
         .secondpart {
             width: 100%;
-            height: auto;
+            height: 75vh;
             background-color: $cream;
             margin: 0 auto;
         }
         
         .secondpart .grid-ContainerSecondpart {
+            width: 100%;
             display: flex;
-            height: 100vh;
-            margin-top: 100px;
+            margin: 0 auto;
+            height: auto;
+            grid-template-columns: repeat(6, 1fr);
+            background-color: aqua;
         }
         
         .secondpart .grid-ContainerSecondpart ul li {
             gap: 20px;
         }
         
-        ul:nth-child(1) {
-            text-align: center;
-        }
-        
         li:nth-child(1) {
-            width: 60%;
-            text-align: center;
-            margin: 0 auto;
-            display: flex;
+            grid-column: 1/span 3;
+            grid-row: 1/span 3;
+            background-color: red
         }
         
         li:nth-child(2) {
-            margin-top: 100px
+            grid-column: 1 /span 4;
+            grid-row: 6/span 3;
+            background-color: red
         }
         
         .secondpart-headline {
             @include headlinefont;
+            // transform: translate(215px, 78px);
             color: $darkgrey;
             font-size: 40px;
         }
@@ -123,7 +123,7 @@
             width: 289px;
             background-color: $darkgrey;
             font-size: 35px;
-            color: $white;
+            color: $cream;
             letter-spacing: 0.295em;
         }
         
@@ -133,24 +133,13 @@
         }
         
         %whiteboxStyle {
-            height: 486px;
-            width: 700px;
+            height: 526px;
+            width: 601px;
+            height: 226px;
+            width: 101px;
             background: $white;
         }
         
         .whiteBox {
             @extend %whiteboxStyle;
-        }
-        
-        .new {
-            @include navigationfont;
-            font-size: 30px;
-            color: $brown;
-            text-align: end;
-            margin: 10px 15px 0px 0px;
-        }
-        
-        .mainheroSide {
-            max-width: 90%;
-            margin-top: 100px;
         }

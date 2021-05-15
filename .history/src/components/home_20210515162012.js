@@ -4,18 +4,12 @@ import Navigation from "./Navbar";
 import WhiteAirs from "../assets/Shoes/white air shoes.png";
 import mainhero from "../assets/Shoes/main hero shoe.png";
 import downnWardShoe from "../assets/Shoes/downward.png";
-import mainheroSide from "../assets/Shoes/main hero shoe side shot.png";
-
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
-
 const Home = (props) => {
-
   return (
-
     <div className="homeSection">
-
       <div className="firstpart">
         <Navigation />
         <Container className="headlineContainer">
@@ -44,56 +38,48 @@ const Home = (props) => {
                 fluid
               />
             </Col>
-            <Col className="shoeCol">
+            <div className="shoeCol">
               <Image
                 className="brownSneaker"
                 src={mainhero}
                 alt="mainheroshoe"
                 fluid
               />
-            </Col>
-            <Col className="shoeCol">
+            </div>
+            <div className="shoeCol">
               <Image
                 className="downwardShoe"
                 src={downnWardShoe}
                 alt="downwardshoe"
                 fluid
               />
-            </Col>
+            </div>
           </Row>
         </Container>
         <button className="shopbutton">Shop</button>
       </div>
 
+
       <div className="secondpart">
 
-        <div className="grid-ContainerSecondpart">
-          <ul>
-            <li>
-              <div className="secondpart-headline">
-              “Different occassions require unique shoes”.
+        
+      <Container>
+        <Row className="secondpartRow" >
 
-              </div>
-            </li>
-            <li>
-            <button className="Browse">
-              Browse
-            </button>
-            </li>
-          </ul>
-          <ul>
-            <li>
-            <div className="whiteBox">
-              <div className="new">New</div>
-              <Image className="mainheroSide" src={mainheroSide} alt="mainheroside"/>
-              
-            </div>
+        <Col className="secondpart-headline">
+          “Different occassions
+          <br></br>
+          require unique shoes”.
+          <button className="Browse">Browse</button>
 
+        </Col>
 
-            </li>
-          </ul>
-        </div>
+        </Row>
+        <Row >
+        <Col className="whiteBox"></Col>
 
+        </Row>
+      </Container>
        
       </div>
     </div>

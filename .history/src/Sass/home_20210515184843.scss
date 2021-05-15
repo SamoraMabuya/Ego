@@ -144,13 +144,13 @@
         
         .new {
             @include navigationfont;
-            font-size: 30px;
+            font-size: 40;
             color: $brown;
             text-align: end;
             margin: 10px 15px 0px 0px;
         }
         
         .mainheroSide {
-            max-width: 90%;
+            max-width: 80%;
             margin-top: 100px;
         }
