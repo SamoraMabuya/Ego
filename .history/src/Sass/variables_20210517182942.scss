@@ -11,7 +11,7 @@
 @mixin headlines {
     @include headlinefont;
     color: $orangebrown;
-    font-size: 48px;
+    font-size: clamp(38px, 3.125vw, 48px);
 }
 
 @mixin headlineStrong {

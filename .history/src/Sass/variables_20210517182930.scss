@@ -1,0 +1,20 @@
+@import './colors';
+@import './fonts';
+// logo 
+@mixin logoSizes {
+    height: 103.34503173828125px;
+    width: 151.2010498046875px;
+    margin: auto;
+    display: flex;
+}
+
+@mixin headlines {
+    @include headlinefont;
+    color: $orangebrown;
+    font-size: clamp(20px, 3.125vw, 48px);
+}
+
+@mixin headlineStrong {
+    @include headlinefontStrong;
+    color: $brown;
+}
