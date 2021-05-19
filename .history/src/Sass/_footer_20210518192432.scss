@@ -1,0 +1,23 @@
+@import 'colors';
+@import 'fonts';
+.footerSection {
+    background-color: $darkergrey;
+    height: 80vh;
+}
+
+.footerSection ul li:nth-child(1) {
+    @include storelistheaderfont;
+    color: $white;
+    font-size: 25px;
+}
+
+.footerSection ul li p {
+    @include listTextfont;
+    color: $white;
+    font-size: 20px;
+}
+
+.footerSection ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}

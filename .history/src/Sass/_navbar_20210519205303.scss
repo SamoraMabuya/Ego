@@ -1,0 +1,40 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.logo {
+    @include logoSizes;
+    top: 80;
+    // padding-top: 35.24px;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 75px;
+    text-decoration: none;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: auto;
+        li {
+            margin-inline: 33px;
+            a {
+                @include navigationfont;
+                text-decoration: none;
+                color: $brown;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+header {
+    display: none;
+}
+
+@media all and (max-width: 768px) {
+    header {
+        font-size: 35px;
+        color: $brown;
+        display: block;
+    }
+}

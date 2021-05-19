@@ -1,0 +1,48 @@
+    @import 'colors';
+    @import 'fonts';
+    %listStyle {
+        @include listTextfont;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: $white;
+    }
+    
+    .footerSection {
+        background-color: $darkergrey;
+        height: 80vh;
+    }
+    
+    .footerSection .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 20rem);
+        justify-content: center;
+    }
+    
+    .footerSection ul li:nth-child(1) {
+        @include storelistheaderfont;
+        color: $white;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .footerSection ul:nth-child(1) {
+            margin-right: 100px;
+        }
+    }
+    
+    .footerSection ul li p {
+        @extend %listStyle;
+    }
+    
+    .footerSection ul {
+        margin: 104px 0px 30px 0px
+    }
+    
+    .footerSection ul li .ourOffice {
+        margin-bottom: 8px
+    }
+    
+    .footerSection ul li span {
+        @extend %listStyle;
+    }

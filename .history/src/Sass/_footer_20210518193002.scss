@@ -1,0 +1,32 @@
+@import 'colors';
+@import 'fonts';
+.footerSection {
+    background-color: $darkergrey;
+    height: 80vh;
+}
+
+.footerSection ul li:nth-child(1) {
+    @include storelistheaderfont;
+    color: $white;
+    font-size: 25px;
+}
+
+.footerSection ul li p {
+    @include listTextfont;
+    color: $white;
+    font-size: 20px;
+}
+
+.footerSection ul {
+    display: inline-grid;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.footerSection ul li {
+    margin: 0 auto;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}

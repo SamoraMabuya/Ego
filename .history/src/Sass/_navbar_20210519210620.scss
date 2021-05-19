@@ -1,0 +1,47 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.logo {
+    @include logoSizes;
+    padding-top: 35.24px;
+    max-width: 35%;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 75px;
+    text-decoration: none;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: auto;
+        li {
+            margin-inline: 33px;
+            a {
+                @include navigationfont;
+                text-decoration: none;
+                color: $brown;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.header .burger {
+    // display: none;
+}
+
+// header {
+//     display: flex;
+// }
+@media all and (max-width: 768px) {
+    .header .burger {
+        font-size: 35px;
+        color: $brown;
+        // display: block;
+        padding-top: 35.24px;
+        z-index: 2;
+        position: relative;
+    }
+    .header .logo {}
+}
