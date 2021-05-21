@@ -1,0 +1,22 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.shopSection {
+    background-color: $white;
+}
+
+.shopSecondPart {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.shopHeadline {
+    @include headlines;
+    margin: 130px 0px 0px 150px;
+    width: 50%;
+    strong {
+        @include headlineStrong
+    }
+}

@@ -1,0 +1,19 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.shopSection .shopSecondPart {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    background-color: $white;
+}
+
+.shopHeadline {
+    @include headlines;
+    margin: 190px 0px 0px 150px;
+    // width: 30%;
+    strong {
+        @include headlineStrong
+    }
+}
