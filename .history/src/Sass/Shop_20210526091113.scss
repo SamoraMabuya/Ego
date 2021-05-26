@@ -1,0 +1,268 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.shopSection {
+    background-color: $white;
+}
+
+.shopSecondPart {
+    padding: 0px;
+    margin: 0px;
+}
+
+.shop-gridcontainer {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 5px;
+    background-color: $white;
+}
+
+.shopContainer ul li:nth-child(1) {
+    grid-column: 2/ span 3;
+    grid-row: 4/span 4;
+    position: relative;
+    left: 0px;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.shopContainer ul li:nth-child(2) {
+    grid-column: 1/ span 3;
+    grid-row: 9/ span 2;
+    position: relative;
+    top: -240px;
+}
+
+.shopContainer ul li:nth-child(3) {
+    grid-column: 4/ span 3;
+    grid-row: 8 /span 2;
+    height: 100vh;
+    position: relative;
+}
+
+.blueSneakers {
+    max-width: 85%;
+    top: -100px;
+}
+
+.displaySneakers {
+    max-width: 46%;
+    position: relative;
+    left: 170px;
+    top: 60px;
+}
+
+.shopSection .blueheels {
+    position: absolute;
+    max-width: 22%;
+    top: -28px;
+    right: 0;
+    transform: rotateZ(4deg);
+}
+
+.shopHeadline {
+    @include headlines;
+    width: 100%;
+    text-align: start;
+    margin-top: 100px;
+    strong {
+        @include headlineStrong
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    %zeroPosition {
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    .shopHeadline {
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+    }
+    .shop-gridcontainer {
+        list-style: none;
+        display: grid;
+        grid-template-columns: none;
+        column-gap: 0px;
+        background-color: $white;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .shopContainer ul li:nth-child(1) {
+        @extend %zeroPosition;
+        grid-column: 2 / span 4;
+        text-align: center;
+        position: relative;
+        margin-top: 100px;
+        top: 700;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .shopContainer ul li:nth-child(2) {
+        grid-column: 1/ span 3;
+        grid-row: 9/ span 2;
+        position: relative;
+        top: -180px;
+        @extend %zeroPosition;
+    }
+    .shopContainer ul li:nth-child(3) {
+        grid-column: 4/ span 3;
+        grid-row: 8 /span 2;
+        height: none;
+        position: relative;
+        top: 100px;
+        @extend %zeroPosition;
+    }
+    .blueSneakers {
+        position: relative;
+        margin: 0 auto;
+        top: 0px;
+    }
+    .displaySneakers {
+        display: flex;
+        margin: 0 auto;
+        @extend %zeroPosition;
+    }
+}
+
+// Shop section 
+.shop-productsSection {
+    background-color: $cream;
+    ul {
+        display: flex;
+        position: relative;
+        margin: 100px 0px 0px 0px;
+        li {
+            @include navigationfont;
+            font-size: 30px;
+            color: $darkgrey;
+            margin-inline: 30px;
+        }
+    }
+}
+
+%filterHeadingStyle {
+    @include sneakerHeadline;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    color: $darkgrey;
+    margin-top: 200px
+}
+
+.filterheading {
+    @extend %filterHeadingStyle;
+}
+
+.filterheading:nth-child(2) {
+    margin-top: 72px;
+}
+
+.filterheading:nth-child(5) {
+    margin-top: 150px;
+}
+
+.shop-productsSection .shoeItemContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
+    grid-gap: 150px;
+    left: -50px;
+}
+
+.shop-productsSection .shoeItemContainer .shoeItem {
+    display: flex;
+    flex-direction: column;
+    height: 431px;
+    width: 426px;
+    background-color: $white;
+    list-style: none;
+    padding: 4px;
+}
+
+.whiteAir,
+.sideBrownSneakers,
+.blueNike,
+.limeGreenSports,
+.lightGreenShoes {
+    max-width: 75%;
+    align-self: center;
+    transform: translateY(100px);
+}
+
+.flowerLovernBoots {
+    max-width: 50%;
+    align-self: center;
+    transform: translateY(70px);
+}
+
+.LeopardLetherHeels {
+    max-width: 50%;
+    align-self: center;
+    transform: translateY(80px);
+}
+
+.StellionKreeHeels {
+    max-width: 50%;
+    align-self: center;
+    transform: translateY(70px);
+}
+
+.FlowerForms {
+    max-width: 60%;
+    align-self: center;
+    transform: translateY(70px);
+}
+
+.BeigeFormHeels {
+    max-width: 65%;
+    align-self: center;
+    transform: translateY(70px);
+}
+
+.darkBanner {
+    height: 72px;
+    width: 100%;
+    background-color: $darkgrey;
+    margin-top: auto;
+    display: flex;
+}
+
+%productsFontStyle {
+    @include shoeProductsFont;
+    color: $white;
+    position: relative;
+}
+
+.ShoeLabel {
+    @extend %productsFontStyle;
+    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+    top: -8px;
+    float: right;
+    height: auto
+}
+
+.Price {
+    @extend %productsFontStyle;
+    font-size: 18px;
+    // margin: 0px 10px 0px 0px;
+    float: right;
+    right: 10px;
+    top: 7px;
+}
+
+.colorTag {
+    @include shoeProductsColorFont;
+    font-size: 18px;
+    color: $white;
+    display: block;
+    margin: 0px 0px 0px 10px;
+}
