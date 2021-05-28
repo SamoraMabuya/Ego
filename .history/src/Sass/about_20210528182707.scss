@@ -1,0 +1,11 @@
+@use './about';
+@use './fonts';
+.AboutHeadline {
+    @include headlines;
+    width: 100%;
+    text-align: start;
+    margin-top: 100px;
+    strong {
+        @include headlineStrong
+    }
+}

@@ -1,0 +1,15 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 100%;
+    margin-top: 182px;
+    strong {
+        @include headlineStrong
+    }
+}
+
+.aboutContent {
+    visibility: hidden;
+}

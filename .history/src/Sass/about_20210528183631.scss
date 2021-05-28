@@ -1,0 +1,13 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 100%;
+    margin-top: 100px;
+    // margin: 0 auto;
+    word-spacing: 2em;
+    strong {
+        @include headlineStrong
+    }
+}

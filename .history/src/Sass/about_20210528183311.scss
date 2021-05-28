@@ -1,0 +1,16 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-content: center;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    strong {
+        @include headlineStrong
+    }
+}
