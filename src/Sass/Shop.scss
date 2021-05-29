@@ -138,15 +138,17 @@
     overflow: hidden;
     height: auto;
     padding-bottom: 200px;
-    ul {
+    .filterList {
         display: flex;
         position: relative;
         margin: 100px 0px 0px 100px;
-        li {
+        button {
             @include navigationfont;
             font-size: 30px;
             color: $darkgrey;
             margin-inline: 30px;
+            background: none;
+            border: none;
         }
     }
 }

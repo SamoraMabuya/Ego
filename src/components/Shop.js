@@ -1,25 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Sass/Shop.scss";
 import Navbar from "./Navbar";
-import { Container, Row, Col } from "react-bootstrap";
 import blueheels from "../assets/Shoes/holding blue high heels.png";
 import blueNikeSneakers from "../assets/Shoes/holding nike shoes.png";
 import displaySneakers from "../assets/Shoes/sneakers on display.png";
 import Image from "react-bootstrap/Image";
-import ProductItems from "./ProductItems";
-import whiteAir from "../assets/Shoes/whieAir.png";
-import sideBrownSneakers from "../assets/Shoes/main hero shoe side shot.png";
-import blueNike from "../assets/Shoes/blueNike.png";
-import limeGreenSports from "../assets/Shoes/limegreenshoes.png";
-import lightGreenShoes from "../assets/Shoes/lightgreensport.png";
 
-import flowerLovernBoots from "../assets/Shoes/stellion boots.png";
-import LeopardLetherHeels from "../assets/Shoes/black heels.png";
-import StellionKreeHeels from "../assets/Shoes/Stellion Kree Heels.png";
-import FlowerForms from "../assets/Shoes/flower Heels.png";
-import BeigeFormHeels from "../assets/Shoes/Beige Form Heels.png";
+
 
 import ShopFooter from "./Footers/ShopFooter";
+import productItems from "./ProductItems";
 
 const Shop = () => {
   const ShoeLabel = (props) => {
@@ -36,6 +26,24 @@ const Shop = () => {
   const FilterHeading = (props) => {
     return <span className="filterheading">{props.filterheading}</span>;
   };
+
+  const [shoeItems, setShoeItems] = useState(productItems);
+
+
+  const filterType = (shoeCategory) => {
+    const updatedShoeItem = productItems.filter((currentItem) => {
+      return currentItem.category === shoeCategory
+    })
+
+    setShoeItems(updatedShoeItem)
+  }
+  
+
+  // const [heelsTitle, setheelsTitle] = useState(false);
+
+  // const hideheelsheading = () => setheelsTitle(!heelsTitle)
+
+
 
   return (
     <div className="shopSection">
@@ -75,162 +83,36 @@ const Shop = () => {
       </div>
 
       <div className="shop-productsSection">
-        <ul className="filterList">
-          <li>All</li>
-          <li>Sneakers</li>
-          <li>Heels</li>
-        </ul>
+        <div className="filterList">
+          <button onClick={() => setShoeItems(productItems)}>All</button>
+          <button onClick={() => filterType('sneakers')}>Sneakers</button>
+          <button onClick={() =>filterType('heels')}>Heels</button>
+        </div>
 
         <FilterHeading filterheading="Sneakers" />
 
-        <div className="wrapper-grid">
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image className="whiteAir" src={whiteAir} alt="whiteAir" />
-              <div className="darkBanner">
-                <ShoeLabel label="Air Nike Sneakers" />
-                <Price cost="R1000.00" />
-                <Color color="White" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="sideBrownSneakers"
-                src={sideBrownSneakers}
-                alt="sideBrownSneakers"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Ego Den Sneakers" />
-                <Price cost="R1000.00" />
-                <Color color="Clear Brown" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image className="blueNike" src={blueNike} alt="blueNike" />
-              <div className="darkBanner">
-                <ShoeLabel label="Air Blue High Sneakers" />
-                <Price cost="R1000.00" />
-                <Color color="Sky Blue" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="limeGreenSports"
-                src={limeGreenSports}
-                alt="limeGreenSports"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Green Running Nike" />
-                <Price cost="R1000.00" />
-                <Color color="Golden Green" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="lightGreenShoes"
-                src={lightGreenShoes}
-                alt="lightGreenShoes"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Light Green Nike" />
-                <Price cost="R1000.00" />
-                <Color color="Light Green" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Heels section */}
-
         <FilterHeading filterheading="Heels" />
 
+
         <div className="wrapper-grid">
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="flowerLovernBoots"
-                src={flowerLovernBoots}
-                alt="flowerLovernBoots"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Flower Lovern Booots" />
-                <Price cost="R1000.00" />
-                <Color color="Khaki Beige Crimson" />
+          {shoeItems.map((shoeProduct) => {
+            const { id, image, shoeName, price, color, cname } = shoeProduct;
+            return (
+              <div className="shoeItemContainer" key={id}>
+                <div className="shoeItem">
+                  <Image className={cname} src={image} alt={shoeName} fluid />
+                  <div className="darkBanner">
+                    <ShoeLabel label={shoeName} />
+                    <Price cost={price} />
+                    <Color color={color} />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="LeopardLetherHeels"
-                src={LeopardLetherHeels}
-                alt="LeopardLetherHeels"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Leopard Lether Heels" />
-                <Price cost="R1000.00" />
-                <Color color="Charcoal Black" />
-              </div>
-            </div>
-          </div>
+              // {/* Heels section  */}
 
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="StellionKreeHeels"
-                src={StellionKreeHeels}
-                alt="StellionKreeHeels"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Stellion Kree Heels" />
-                <Price cost="R1000.00" />
-                <Color color="Dark Blue" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="FlowerForms"
-                src={FlowerForms}
-                alt="FlowerForms"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Flower Forms" />
-                <Price cost="R1000.00" />
-                <Color color="Blue and Flowers deco" />
-              </div>
-            </div>
-          </div>
-
-          <div className="shoeItemContainer">
-            <div className="shoeItem">
-              <Image
-                className="BeigeFormHeels"
-                src={BeigeFormHeels}
-                alt="BeigeFormHeels"
-              />
-              <div className="darkBanner">
-                <ShoeLabel label="Beige Form Heels" />
-                <Price cost="R1000.00" />
-                <Color color="Golden Brown" />
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
 
