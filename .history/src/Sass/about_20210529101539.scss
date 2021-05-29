@@ -1,0 +1,122 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 20%;
+    margin-top: 182px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    strong {
+        @include headlineStrong
+    }
+}
+
+.aboutContent {
+    @include aboutContentfont;
+    position: relative;
+    font-size: 26px;
+    color: $brown;
+    width: clamp(400px, 38%, 800px);
+    display: flex;
+    position: relative;
+    margin-bottom: 152px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Futura PT;
+    line-height: 43px;
+    letter-spacing: 0.13em;
+    text-align: left;
+}
+
+.holdingblackheels {
+    position: absolute;
+    max-width: 43%;
+    // transform: translateY(-600px);
+    top: 200px;
+    left: -200px;
+}
+
+.darkblueStellions {
+    position: relative;
+    max-width: 20%;
+    display: flex;
+    right: 90px;
+    float: right;
+    margin-right: 0 auto;
+}
+
+.mainSneakersDisplay {
+    max-width: 20%;
+    position: relative;
+}
+
+.aboutcontainer .aboutgrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    margin-top: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.aboutcontainer .aboutgrid .column:nth-child(1) {
+    margin-top: 100px;
+}
+
+.aboutcontainer .aboutgrid .column:nth-child(2) {}
+
+.aboutcontainer .aboutgrid .column:nth-child(3) {
+    position: absolute;
+    right: 0px;
+    transform: translateY(-200px);
+}
+
+.aboutcontainer .aboutgrid .column:nth-child(4) {}
+
+.aboutcontainer .aboutgrid .column:nth-child(5) {
+    position: absolute;
+}
+
+.aboutcontainer .aboutgrid .column:nth-child(6) {
+    transform: translateY(-20px);
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutcontainer .aboutgrid .column:nth-child(1) {
+        margin-top: 0px;
+    }
+    .holdingblackheels {
+        position: relative;
+        max-width: 45%;
+        top: 0px;
+        left: -70px;
+        transform: rotateZ(-10deg);
+        margin-bottom: 60px;
+    }
+    .aboutcontainer .aboutgrid .column:nth-child(3) {
+        position: relative;
+        transform: translateY(-80px);
+    }
+    .darkblueStellions {
+        max-width: 30%;
+        position: relative;
+        margin: 0 auto;
+        float: initial;
+        right: initial;
+    }
+    .aboutcontainer .aboutgrid .column:nth-child(5) {
+        position: relative;
+        transform: translateY(-80px);
+    }
+    .aboutcontainer .aboutgrid .column:nth-child(6) {
+        transform: translateY(0px);
+    }
+    .mainSneakersDisplay {
+        max-width: 40%;
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+    }
+}

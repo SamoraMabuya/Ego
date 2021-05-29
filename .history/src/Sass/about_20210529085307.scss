@@ -1,0 +1,75 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 20%;
+    margin-top: 182px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    strong {
+        @include headlineStrong
+    }
+}
+
+.aboutContent {
+    @include aboutContentfont;
+    font-size: 30px;
+    color: $brown;
+    width: clamp(400px, 50%, 700px);
+    display: flex;
+    position: relative;
+    top: 100px;
+    margin-bottom: 152px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Futura PT;
+    line-height: 43px;
+    letter-spacing: 0.13em;
+    text-align: left;
+}
+
+.holdingblackheels {
+    position: absolute;
+    max-width: 42%;
+    // transform: translateY(-100px);
+    // left: -198px;
+}
+
+.darkblueStellions {
+    position: relative;
+    max-width: 25%;
+    // top: 300px;
+    display: flex;
+    // left: 120px;
+    // margin: 0 auto;
+    // right: 55px;
+    transform: translateY(365px);
+}
+
+.aboutcontainer .aboutgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem));
+    justify-content: center;
+    // row-gap: 25px;
+    // position: relative;
+    // top: 71px;
+}
+
+// .aboutcontainer .aboutgrid .column:nth-child(2) {
+//     grid-column: 1/ span 2;
+//     // grid-row: 1 /span 2;
+//     // width: 160%;
+// }
+// .aboutcontainer .aboutgrid .column:nth-child(2) {
+//     grid-column: 1/ span 3;
+//     grid-row: 1 /span 2;
+//     // width: 160%;
+// }
+// .aboutcontainer .aboutgrid .column:nth-child(3) {
+//     grid-column: 3/ span 1;
+//     grid-row: 1 /span 2;
+//     background-color: aqua;
+//     // width: 100%;
+// }

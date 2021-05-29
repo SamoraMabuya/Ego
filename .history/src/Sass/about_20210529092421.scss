@@ -1,0 +1,67 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.AboutHeadline {
+    @include headlines;
+    width: 20%;
+    margin-top: 182px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    strong {
+        @include headlineStrong
+    }
+}
+
+.aboutContent {
+    @include aboutContentfont;
+    position: relative;
+    font-size: 26px;
+    color: $brown;
+    width: clamp(480px, 35%, 600px);
+    display: flex;
+    position: relative;
+    margin-bottom: 152px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Futura PT;
+    line-height: 43px;
+    letter-spacing: 0.13em;
+    text-align: left;
+}
+
+.holdingblackheels {
+    position: absolute;
+    max-width: 43%;
+    // transform: translateY(-600px);
+    top: 240px;
+    left: -200px;
+}
+
+.darkblueStellions {
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    left: 60px;
+    right: 0px;
+    transform: translateY(390px);
+}
+
+.mainSneakersDisplay {
+    // position: relative;
+    max-width: 80%;
+    // top: 0px;
+}
+
+.aboutcontainer .aboutgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem));
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.aboutcontainer .aboutgrid .column:nth-child(1) {}
+
+.aboutcontainer .aboutgrid .column:nth-child(2) {}
+
+.aboutcontainer .aboutgrid .column:nth-child(3) {}
