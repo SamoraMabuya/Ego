@@ -1,0 +1,14 @@
+.myButtons {
+    width: 40px;
+    height: 30px;
+    background-color: beige;
+    border-radius: 10px;
+}
+
+.heading {
+    visibility: initial;
+}
+
+.heading .active {
+    visibility: hidden;
+}
