@@ -1,0 +1,12 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.cartItem {
+    @include featureshoetext;
+    font-size: 24px;
+    color: $darkgrey;
+    position: relative;
+    float: right;
+    top: -35px;
+    right: 30px;
+}

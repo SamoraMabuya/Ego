@@ -1,0 +1,22 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.detailPage {
+    background-color: $darkergrey;
+}
+
+.productImage {
+    height: 434.3610534667969px;
+    width: 401px;
+    left: 253px;
+    top: 378.0415954589844px;
+    background: #FFFFFF;
+}
+
+.singleProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    // justify-content: center;
+    margin: 0 auto;
+    column-gap: 5px;
+}

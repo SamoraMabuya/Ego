@@ -1,8 +1,0 @@
-@import './colors';
-@import './fonts';
-.hello {
-    font-family: "futura-pt-light-italic-regular";
-    src: url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("woff"), url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("opentype"), url("https://fontsme.com/wp-data/f/745/14745/file/FuturaPTLightOblique.otf") format("truetype");
-    font-size: 20rem;
-    color: $darkergrey;
-}

@@ -1,0 +1,13 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+.cartItems {
+    font-size: 40px;
+    // @include featureshoetext;
+    // font-size: 24px;
+    // color: $darkgrey;
+    // position: relative;
+    // float: right;
+    // top: -35px;
+    // right: 30px;
+}

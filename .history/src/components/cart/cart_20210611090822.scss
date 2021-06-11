@@ -1,0 +1,9 @@
+@import '../../Sass/colors';
+@import './fonts';
+@import '../../fonts';
+@import './variables';
+.cartItem {
+    @include featureshoetext;
+    font-size: 24px;
+    color: $darkgrey;
+}

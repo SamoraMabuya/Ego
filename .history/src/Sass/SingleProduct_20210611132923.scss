@@ -1,0 +1,73 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.detailPage {
+    background-color: $darkergrey;
+    height: 140vh;
+}
+
+.productImage {
+    height: 400px;
+    width: 401px;
+    background: #FFFFFF;
+}
+
+.productImage img {
+    max-width: 100%;
+    transform: translateY(100px);
+    margin: 0 auto;
+}
+
+.singleProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    // column-gap: 5px;
+}
+
+.product-detailsWrapper {
+    text-align: center;
+}
+
+.product-details {
+    color: $white;
+    li {
+        margin-bottom: 10px
+    }
+}
+
+.product-details .shoeTitle {
+    @include headlinefontStrong;
+    font-size: 28px;
+}
+
+.product-details .shoePrice {
+    @include storelistheaderfont;
+    font-size: 22px;
+}
+
+.product-details .shoeColor {
+    @include featureshoetext;
+    font-size: 20px;
+}
+
+.product-details .PickSize {
+    @include storelistheaderfont;
+    font-size: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    button {
+        height: 65px;
+        width: 388px;
+        margin-bottom: 15px;
+        @include cartbuttonfont;
+    }
+}

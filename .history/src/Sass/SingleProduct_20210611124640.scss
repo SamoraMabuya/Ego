@@ -1,0 +1,28 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.detailPage {
+    background-color: $darkergrey;
+}
+
+.productImage {
+    height: 400px;
+    width: 401px;
+    background: #FFFFFF;
+}
+
+.productImage img {
+    max-width: 100%;
+    transform: translateY(140px);
+    margin-bottom: 60px;
+    align-self: center;
+}
+
+.singleProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    // column-gap: 5px;
+}

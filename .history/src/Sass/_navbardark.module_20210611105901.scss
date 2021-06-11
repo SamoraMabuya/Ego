@@ -1,0 +1,21 @@
+    .navbar {
+        margin-top: 75px;
+        text-decoration: none;
+        ul {
+            display: flex;
+            list-style: none;
+            margin: auto;
+            li {
+                display: flex;
+                height: auto;
+                a {
+                    @include navigationfont;
+                    margin-inline: 33px;
+                    text-decoration: none;
+                    color: $darkergrey;
+                    font-size: 30px;
+                    height: auto;
+                }
+            }
+        }
+    }
