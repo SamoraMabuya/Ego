@@ -4,13 +4,14 @@ import Navbar from "./NavItems/Navbar-Dark";
 import { ProductsContext } from "../context/products-context";
 import "../Sass/SingleProduct.scss";
 import Image from "react-bootstrap/Image";
-import ShoeSizes from "./ShoeSizes";
 
 const SingleProduct = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
   const { id } = match.params;
   const [product, setproduct] = useState(null);
-  
+
+  const[shoeSize, setshoeSize] = useState(true)
+
   useEffect(() => {
     const product = products.find((item) => Number(item.id) === Number(id));
 
@@ -28,8 +29,6 @@ const SingleProduct = ({ match, history: { push } }) => {
   const CartButton = (props) => {
     return <button class="cartButtons">{props.cartbutton}</button>;
   };
-
- 
   const { image, shoeName, price, color } = product;
   return (
     <div className="detailPage">
@@ -45,12 +44,22 @@ const SingleProduct = ({ match, history: { push } }) => {
             <li className="shoeTitle">{shoeName}</li>
             <li className="shoePrice">{price}</li>
             <li className="shoeColor">{color}</li>
+            <li className="PickSize">Shoe Size:</li>
           </ul>
           <div className="shoeSizes">
-         <ShoeSizes buttons={[
-           "9", "10", "11", "12", "13", "14", "15"
-         ]}
-         />
+            <button onClick={() => {
+              setshoeSize(false);
+
+            }}  className={shoeSize ? "size " : "sizeSelected" }>9</button>
+            <button onClick={() => {
+              setshoeSize(false);
+             }} className={shoeSize ? "size " : "sizeSelected" }>10</button>
+            <button className="size">11</button>
+            <button className="size">12</button>
+            <button className="size">13</button>
+            <button className="size">14</button>
+            <button className="size">15</button>
+
           </div>
           <div className="product-buttons">
             <CartButton cartbutton="+ Add to Cart" />

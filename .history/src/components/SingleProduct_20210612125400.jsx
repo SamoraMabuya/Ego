@@ -5,12 +5,16 @@ import { ProductsContext } from "../context/products-context";
 import "../Sass/SingleProduct.scss";
 import Image from "react-bootstrap/Image";
 import ShoeSizes from "./ShoeSizes";
+import {defaultSize} from "./ShoeSizes";
 
 const SingleProduct = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
   const { id } = match.params;
   const [product, setproduct] = useState(null);
   
+
+
+
   useEffect(() => {
     const product = products.find((item) => Number(item.id) === Number(id));
 
@@ -29,7 +33,6 @@ const SingleProduct = ({ match, history: { push } }) => {
     return <button class="cartButtons">{props.cartbutton}</button>;
   };
 
- 
   const { image, shoeName, price, color } = product;
   return (
     <div className="detailPage">
@@ -45,12 +48,12 @@ const SingleProduct = ({ match, history: { push } }) => {
             <li className="shoeTitle">{shoeName}</li>
             <li className="shoePrice">{price}</li>
             <li className="shoeColor">{color}</li>
+            <li className="PickSize">Shoe Size:</li>
           </ul>
           <div className="shoeSizes">
          <ShoeSizes buttons={[
            "9", "10", "11", "12", "13", "14", "15"
-         ]}
-         />
+         ]}/>
           </div>
           <div className="product-buttons">
             <CartButton cartbutton="+ Add to Cart" />

@@ -45,11 +45,16 @@
 
 .product-details .shoePrice {
     @include storelistheaderfont;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .product-details .shoeColor {
     @include featureshoetext;
+    font-size: 20px;
+}
+
+.product-details .PickSize {
+    @include storelistheaderfont;
     font-size: 20px;
 }
 

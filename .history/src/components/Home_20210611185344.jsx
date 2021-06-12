@@ -63,11 +63,7 @@ const Home = () => {
             </Col>{" "}
           </Row>{" "}
         </Container>{" "}
-
-        <NavLink exact to="/Shop">
         <button className="shopbutton"> Shop </button>{" "}
-
-        </NavLink>
       </div>
       <div className="secondpart">
         <div className="grid-ContainerSecondpart">
@@ -81,6 +77,7 @@ const Home = () => {
             <li>
               <NavLink exact to="/Shop">
               <button className="Browse">
+
                 Browse
                 </button>
 
@@ -116,11 +113,7 @@ const Home = () => {
               </div>{" "}
             </li>{" "}
             <li>
-              <NavLink exact to="/Shop">
-              <button className="Shop"> Shop 
-              </button>{" "}
-              </NavLink>
-            
+              <button className="Shop"> Shop </button>{" "}
             </li>{" "}
           </ul>{" "}
           <ul>

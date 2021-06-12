@@ -29,7 +29,10 @@ const SingleProduct = ({ match, history: { push } }) => {
     return <button class="cartButtons">{props.cartbutton}</button>;
   };
 
- 
+  const DisplaySize = (Event) => {
+    return <div>{Event.target.name}</div>
+
+  }
   const { image, shoeName, price, color } = product;
   return (
     <div className="detailPage">
@@ -45,11 +48,13 @@ const SingleProduct = ({ match, history: { push } }) => {
             <li className="shoeTitle">{shoeName}</li>
             <li className="shoePrice">{price}</li>
             <li className="shoeColor">{color}</li>
+            <li className="PickSize">Shoe Size:{DisplaySize}</li>
           </ul>
           <div className="shoeSizes">
          <ShoeSizes buttons={[
            "9", "10", "11", "12", "13", "14", "15"
          ]}
+         displaySize={DisplaySize}
          />
           </div>
           <div className="product-buttons">

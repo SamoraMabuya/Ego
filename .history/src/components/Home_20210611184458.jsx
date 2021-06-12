@@ -7,7 +7,6 @@ import downnWardShoe from "../assets/Shoes/downward.png";
 import mainheroSide from "../assets/Shoes/main hero shoe side shot.png";
 import beigeBoots from "../assets/Shoes//beige boots.png";
 import HomeFooter from "./Footers/HomeFooter";
-import { NavLink } from "react-router-dom";
 
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
@@ -63,11 +62,7 @@ const Home = () => {
             </Col>{" "}
           </Row>{" "}
         </Container>{" "}
-
-        <NavLink exact to="/Shop">
         <button className="shopbutton"> Shop </button>{" "}
-
-        </NavLink>
       </div>
       <div className="secondpart">
         <div className="grid-ContainerSecondpart">
@@ -79,14 +74,7 @@ const Home = () => {
               </div>{" "}
             </li>{" "}
             <li>
-              <NavLink exact to="/Shop">
-              <button className="Browse">
-                Browse
-                </button>
-
-              </NavLink>
-  
-
+              <button className="Browse" to='/Shop'> Browse </button>{" "}
             </li>{" "}
           </ul>{" "}
           <ul>
@@ -116,11 +104,7 @@ const Home = () => {
               </div>{" "}
             </li>{" "}
             <li>
-              <NavLink exact to="/Shop">
-              <button className="Shop"> Shop 
-              </button>{" "}
-              </NavLink>
-            
+              <button className="Shop"> Shop </button>{" "}
             </li>{" "}
           </ul>{" "}
           <ul>
