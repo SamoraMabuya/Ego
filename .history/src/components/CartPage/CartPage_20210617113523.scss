@@ -1,0 +1,40 @@
+@import '../../Sass/variables';
+@import '../../Sass/colors';
+@import '../../Sass/fonts';
+.cartSection {
+    background-color: $darkergrey;
+    height: 140vh;
+}
+
+.cartPage {
+    width: 100%;
+    height: 140vh;
+}
+
+.cart-item {
+    border: 2px solid #FFFFFF;
+    width: 55%;
+    border-left: none;
+    border-right: none;
+    margin: 0 auto;
+    padding: 25px 0px 25px 0px;
+    .item-container {
+        background-color: $white;
+        position: relative;
+        max-width: 30%;
+        height: 30vh;
+        object-fit: contain;
+    }
+}
+
+.item-container .product-image {
+    max-width: 85%;
+    display: flex;
+    margin: 0 auto;
+    transform: translateY(50px);
+}
+
+.item-details {
+    display: flex;
+    flex-direction: row;
+}

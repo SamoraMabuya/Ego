@@ -1,0 +1,31 @@
+@import '../../Sass/variables';
+@import '../../Sass/colors';
+@import '../../Sass/fonts';
+.cartSection {
+    background-color: $darkergrey;
+    height: 140vh;
+}
+
+.cartPage {
+    width: 100%;
+    height: 140vh;
+}
+
+.cart-item {
+    .item-container {
+        background-color: $white;
+        position: relative;
+        width: 240px;
+        height: 240px;
+        left: 200px;
+    }
+}
+
+.product-image {
+    max-width: 85%;
+    position: relative;
+    align-self: center;
+    transform: translateY(100px);
+}
+
+.cartpage .nav {}
