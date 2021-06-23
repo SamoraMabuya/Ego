@@ -112,9 +112,9 @@ const Shop = () => {
               Heels{" "}
             </button>{" "}
           </div>
-          {/* <div className="CartCount">
+          <div className="CartCount">
             <Cart />
-          </div> */}
+          </div>
         </div>
         <FilterHeading filterheading={currentHeading} />
         <div className={showHeading ? "heelsHeading" : "heelsHeadinghidden"}>

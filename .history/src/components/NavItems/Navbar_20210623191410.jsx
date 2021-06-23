@@ -29,7 +29,7 @@ const Navbar = () => {
             <NavLink activeClassName="is-active" to="/Shop">
               Shop{" "}
             </NavLink>{" "}
-            <NavLink activeClassName="is-active" to="/">
+            <NavLink activeClassName="is-active" to="#">
               Contact{" "}
             </NavLink>{" "}
 
