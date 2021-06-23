@@ -1,0 +1,144 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.homeDark {
+    background-color: $darkergrey;
+}
+
+.logobrown {
+    @include logoSizes;
+    max-width: 10%;
+    object-fit: contain;
+}
+
+.navLogo,
+.closeIcon {
+    display: none;
+}
+
+.navbar {
+    margin-top: 75px;
+    text-decoration: none;
+    .darknavbarItems {
+        display: flex;
+        list-style: none;
+        margin: auto;
+        li {
+            display: flex;
+            height: auto;
+            a {
+                @include navigationfont;
+                margin-inline: 33px;
+                text-decoration: none;
+                color: $white;
+                font-size: 30px;
+                height: auto;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    margin-top: 70px;
+    .burger {
+        display: none;
+    }
+}
+
+.header nav ul li .activelink {
+    color: $darkergrey;
+    background-color: $white;
+    padding: 0px 25px 0px 25px;
+}
+
+.header nav ul li a:hover:not(.activelink) {
+    text-decoration: underline;
+}
+
+@media all and (max-width: 768px) {
+    .logobrown {
+        @include logoSizes;
+        max-width: 18%;
+        object-fit: contain;
+    }
+    .header nav ul li a.activelink {
+        display: block;
+        color: $darkergrey;
+        background-color: $white;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+        transform: translateX(-15px);
+        width: 110px;
+    }
+    .navLogo {
+        object-fit: contain;
+        display: flex;
+        height: 91px;
+        width: 133px;
+        margin: 10px 0px 60px 0px;
+    }
+    .navbar.active .closeIcon {
+        display: block;
+        color: $white;
+        font-size: 40px;
+        float: right;
+        transform: translate(-50px, -60px);
+    }
+    .header .burger {
+        font-size: 40px;
+        color: $brown;
+        display: block;
+        margin: 10px -50px 0px 50px;
+    }
+    header {
+        display: flex;
+    }
+    .navbar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        margin-top: 0px;
+        left: -100%;
+        transition: all 1s;
+        display: block;
+        ul {
+            li {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 27px;
+                a {
+                    color: $white;
+                    display: block;
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
+    .navbar.active {
+        background-color: $darkergrey;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.CartItemCount {
+    position: relative;
+    float: right;
+    right: 60px;
+    background-color: $white;
+    padding: 10px
+}
+
+@media all and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+    .logobrown {
+        // margin: 0 auto;
+        max-width: 40%;
+        margin-top: 50px;
+        max-width: 20%;
+    }
+}

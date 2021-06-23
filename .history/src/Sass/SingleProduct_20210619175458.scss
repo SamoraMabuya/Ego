@@ -1,0 +1,87 @@
+@import './variables.scss';
+@import './colors';
+@import './fonts';
+.detailPage {
+    background-color: $darkergrey;
+    height: 140vh;
+}
+
+.productImage {
+    height: 400px;
+    width: 401px;
+    background: #FFFFFF;
+    overflow: none;
+    object-fit: contain;
+}
+
+.productImage img {
+    max-width: 100%;
+    transform: translateY(100px);
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.detailPage .singleProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    column-gap: 50px;
+}
+
+.product-detailsWrapper {
+    text-align: center;
+}
+
+.product-details {
+    color: $white;
+    li {
+        margin-bottom: 10px
+    }
+}
+
+.product-details .shoeTitle {
+    @include headlinefontStrong;
+    font-size: 28px;
+}
+
+.product-details .shoePrice {
+    @include storelistheaderfont;
+    font-size: 24px;
+}
+
+.product-details .shoeColor {
+    @include featureshoetext;
+    font-size: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    button {
+        height: 65px;
+        width: 388px;
+        margin-bottom: 15px;
+        @include cartbuttonfont;
+        font-size: 28px;
+        color: $darkgrey;
+    }
+    button:nth-child(1) {
+        background: none;
+        border: 2px solid #FFF8EE;
+        color: $white;
+    }
+}
+
+.shoeSizes {
+    @include featureshoetext;
+    font-size: 22px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: start;
+    margin-bottom: 10px;
+}

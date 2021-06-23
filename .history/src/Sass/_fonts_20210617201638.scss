@@ -1,0 +1,114 @@
+    // subheadline
+    @font-face {
+        font-family: subheadline;
+        src: url(../font/FuturaPTLightOblique.otf);
+    }
+    
+    @mixin subheadline {
+        font-family: subheadline;
+    }
+    
+    // futuraPtMedium
+    @font-face {
+        font-family: futuraPTMedium;
+        src: url(../font/FuturaPTMedium.otf);
+    }
+    
+    @mixin shopbuttonfont {
+        font-family: futuraPTMedium;
+    }
+    
+    @mixin storelistheaderfont {
+        font-family: futuraPTMedium;
+    }
+    
+    @mixin navigationfont {
+        font-family: futuraPTMedium;
+    }
+    
+    @mixin cartbuttonfont {
+        font-family: futuraPTMedium;
+    }
+    
+    // headline font 
+    @font-face {
+        font-family: EBGaramondRegular;
+        src: url(../font/EBGaramond-Regular.ttf);
+    }
+    
+    @mixin headlinefont {
+        font-family: EBGaramondRegular;
+    }
+    
+    // headline strong font 
+    @font-face {
+        font-family: EBGaramondSemibold;
+        src: url(../font/EBGaramond-SemiBold.ttf);
+    }
+    
+    @mixin headlinefontStrong {
+        font-family: EBGaramondSemibold;
+    }
+    
+    // subheadline font 
+    @font-face {
+        font-family: FuturaPTLightOblique;
+        src: url(../font/FuturaPTLightOblique.otf);
+    }
+    
+    @mixin subheadlinefont {
+        font-family: FuturaPTLightOblique;
+    }
+    
+    // featureshoetext
+    @font-face {
+        font-family: FuturaPTBook;
+        src: url(../font/FuturaPTBook.otf);
+    }
+    
+    @mixin featureshoetext {
+        font-family: FuturaPTBook;
+    }
+    
+    @mixin listTextfont {
+        font-family: FuturaPTBook;
+    }
+    
+    // SneakerHeadline
+    @font-face {
+        font-family: EBGaramondSemiBold;
+        src: url(../font/EBGaramond-SemiBold.ttf);
+    }
+    
+    @mixin sneakerHeadline {
+        font-family: EBGaramondSemiBold;
+    }
+    
+    // shoe product list
+    @font-face {
+        font-family: futuraPTCond;
+        src: url(../font/FuturaPTCondMedium.otf);
+    }
+    
+    @mixin shoeProductsFont {
+        font-family: futuraPTCond;
+    }
+    
+    // shoe product color tag font
+    @font-face {
+        font-family: futuraPTCondBook;
+        src: url(../font/FuturaPTCondBook.otf);
+    }
+    
+    @mixin shoeProductsColorFont {
+        font-family: futuraPTCondBook;
+    }
+    
+    @font-face {
+        font-family: FuturaPTLight;
+        src: url(../font/FuturaPTLight.otf);
+    }
+    
+    @mixin aboutContentfont {
+        font-family: FuturaPTLight;
+    }
