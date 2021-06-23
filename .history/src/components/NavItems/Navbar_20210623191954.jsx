@@ -30,8 +30,8 @@ const Navbar = () => {
               Shop{" "}
             </NavLink>{" "}
             {/* <NavLink activeClassName="is-active" to="">
-              Contact{" "}
-            </NavLink>{" "} */}
+              Contact{" "} */}
+            </NavLink>{" "}
 
             <NavLink activeClassName="is-active" to="/About">
               About{" "}
